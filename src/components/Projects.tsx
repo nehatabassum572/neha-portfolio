@@ -19,7 +19,7 @@ const Projects: React.FC = () => {
       title: "Langentify",
       description:
         "Langentify is a production-ready language detection engine that instantly identifies texts across 16 languages. It combines optimized feature extraction with a lightweight model architecture for fast, accurate predictions in web applications.",
-      image: "Public/assests/Screenshot 2025-08-24 175306.png",
+      image: "/assests/Screenshot 2025-08-24 175306.png",
       technologies: ["HTML", "Flask", "Vanilla Javascript", "CSS", "Python", "TF-IDF vectorization"],
       liveUrl: "https://langentify.onrender.com/",
       githubUrl: "https://github.com/nehatabassum572/Langentify",
