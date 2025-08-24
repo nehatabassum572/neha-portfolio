@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'nasalization';
+  src: url('./fonts/nasalization.otf') format('opentype');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'quentin';
+  src: url('./fonts/quentin.otf') format('opentype');
+  font-weight: normal;
+}
