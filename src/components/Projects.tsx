@@ -156,7 +156,7 @@ const Projects: React.FC = () => {
                           <motion.span
                             whileHover={{ scale: 1.1, y: -2 }}
                             key={tech}
-                            className="px-2 py-0.5 bg-[#f8e8f7]/60 text-blue-300 rounded-full text-[10px] text-black cursor-default"
+                            className="px-2 py-0.5 bg-[#f8e8f7]/60 rounded-full text-[10px] text-black cursor-default"
                           >
                             {tech}
                           </motion.span>
