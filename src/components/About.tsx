@@ -24,7 +24,7 @@ const About: React.FC = () => {
             >
               <div className="w-80 h-80 rounded-3xl overflow-hidden shadow-2xl flex items-center justify-center border border-white/20">
                 <img
-                  src="Public\assests\neha_portfolio_img.jpeg"
+                  src="/assets/neha_portfolio_img.jpeg"
                   alt="Profile"
                   className="w-full h-full object-cover"
                 />

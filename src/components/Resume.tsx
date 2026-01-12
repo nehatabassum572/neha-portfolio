@@ -4,7 +4,7 @@ import { Download } from 'lucide-react';
 const Resume: React.FC = () => {
   const handleDownload = () => {
     
-    const pdfPath = `/assests/NehaTabassum_portfolio.pdf`;
+    const pdfPath = `/assets/NehaTabassum_portfolio.pdf`;
 
     const link = document.createElement('a');
     link.href = pdfPath;

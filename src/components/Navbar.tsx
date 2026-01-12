@@ -36,7 +36,7 @@ const Navbar: React.FC = () => {
           {/* <div className="font-myfont2 text-2xl font-bold text-white">Neha Tabassum</div> */}
           <div className="flex items-center gap-3">
             <img
-              src="Public\assests\logo.png"
+              src="/assets/logo.png"
               alt="Neha Tabassum Logo"
               className="w-9 h-9 object-contain"
             />

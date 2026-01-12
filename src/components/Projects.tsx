@@ -19,7 +19,7 @@ const Projects: React.FC = () => {
       title: "Langentify",
       description:
         "Langentify is a production-ready language detection engine that instantly identifies texts across 16 languages. It combines optimized feature extraction with a lightweight model architecture for fast, accurate predictions in web applications.",
-      image: "/assests/Screenshot 2025-08-24 175306.png",
+      image: "/assets/Screenshot 2025-08-24 175306.png",
       technologies: ["HTML", "Flask", "Vanilla Javascript", "CSS", "Python", "TF-IDF vectorization"],
       liveUrl: "https://langentify.onrender.com/",
       githubUrl: "https://github.com/nehatabassum572/Langentify",
@@ -39,7 +39,7 @@ const Projects: React.FC = () => {
       title: "Hand Gesture Recognition System",
       description: 
       "This project demonstrates a real-time hand gesture recognition system using Python, and OpenCV, designed to detect and classify hand gestures (wave, point, peace, fist) for intuitive human-computer interaction. Leveraging computer vision techniques, it processes webcam input to enable seamless gesture-based control.",
-      image: "/assests/hand_gesture.png",
+      image: "/assets/hand_gesture.png",
       technologies: ["Python", "OpenCV"],
       //liveUrl: "https://github.com/nehatabassum572/hand-gesture-recognition",
       githubUrl: "https://github.com/nehatabassum572/hand-gesture-recognition",
@@ -49,7 +49,7 @@ const Projects: React.FC = () => {
       title: "InfraAlert",
       description: 
       "InfraAlert is a full-stack civic-tech platform that enables citizens to report local infrastructure issues such as potholes, garbage overflow, and water leaks. It uses attention levels and role-based reporting to help authorities prioritize and resolve issues efficiently.",
-      image: "/assests/InfraAlert.png",
+      image: "/assets/InfraAlert.png",
       technologies: ["React", "TypeScript", "Tailwind CSS", "Shadcn/ui", "Node.js", "Express.js", "Drizzle ORM", "PostgreSQL"],
       //liveUrl: "https://github.com/nehatabassum572/hand-gesture-recognition",
       githubUrl: "https://github.com/nehatabassum572/Infra-Alert",
@@ -59,7 +59,7 @@ const Projects: React.FC = () => {
       title: "Portfolio",
       description: 
       "A personal portfolio showcasing my projects, skills, and experience in full-stack development and machine learning, built with a focus on clean design, performance, and user experience.",
-      image: "/assests/portfolio.png",
+      image: "/assets/portfolio.png",
       technologies: ["React", "TypeScript", "Tailwind CSS", "Framer Motion"],
       liveUrl: "https://neha-portfolio-gamma.vercel.app/",
       githubUrl: "https://github.com/nehatabassum572/neha-portfolio",
