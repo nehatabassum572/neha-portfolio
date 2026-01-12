@@ -90,13 +90,13 @@ const Projects: React.FC = () => {
             onClick={() =>
               setCurrent((prev) => (prev - 1 + projects.length) % projects.length)
             }
-            className="absolute left-0 z-10 p-2 rounded-full bg-[#f8e8f7] hover:bg-[#f1d1ee]"
+            className="absolute left-2 md:left-0 z-[60] p-2 rounded-full bg-[#f8e8f7] hover:bg-[#f1d1ee]"
           >
             <ChevronLeft size={20} />
           </button>
 
           {/* Carousel */}
-          <div className="flex overflow-hidden w-full justify-center relative h-[500px]">
+          <div className="flex w-full justify-center relative h-[500px] overflow-visible md:overflow-hidden">
             <AnimatePresence initial={false}>
               {projects.map((project, index) => {
                 let position =
@@ -113,10 +113,12 @@ const Projects: React.FC = () => {
                     key={project.id}
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{
-                      opacity: position === "center" ? 1 : 0.3,
-                      scale: position === "center" ? 0.95 : 0.85,
+                      opacity: position === "center" ? 1 : window.innerWidth < 768 ? 0 : 0.3,
+                      scale: position === "center" ? 0.95 : window.innerWidth < 768 ? 0.9 : 0.85,
                       x:
-                        position === "center"
+                         window.innerWidth < 768
+                          ? "0%"
+                          : position === "center"
                           ? "0%"
                           : position === "left"
                           ? "-65%"
@@ -124,11 +126,11 @@ const Projects: React.FC = () => {
                           ? "65%"
                           : "200%",
                       zIndex: position === "center" ? 25 : 10,
-                      filter: position === "center" ? "blur(0px)" : "blur(3px)",
+                      filter: position === "center" ? "blur(0px)" :  window.innerWidth < 768 ?  "blur(0px)"  : "blur(3px)",
                     }}
                     whileHover={position === "center" ? { scale: 1.02, y: -10 } : {}}
                     transition={{ duration: 0.6 }}
-                    className={`absolute w-[380px] h-[500px] rounded-xl shadow-lg overflow-hidden flex flex-col ${
+                    className={`absolute w-[90vw] max-w-[380px] h-auto md:h-[500px] rounded-xl shadow-lg overflow-hidden flex flex-col ${
                       position === "center" ? "bg-black/25 backdrop-blur-xl": "bg-slate-800"
                     }`}
                   >
@@ -146,7 +148,7 @@ const Projects: React.FC = () => {
                       <h3 className="font-myfont text-lg font-bold text-white mb-2">
                         {project.title}
                       </h3>
-                      <p className="font-smooch tracking-[0.08em] text-gray-300 text-m flex-1">
+                      <p className="font-smooch tracking-[0.08em] text-gray-300 leading-relaxed text-m flex-1">
                         {project.description}
                       </p>
 
@@ -200,7 +202,7 @@ const Projects: React.FC = () => {
           {/* Right Button */}
           <button
             onClick={() => setCurrent((prev) => (prev + 1) % projects.length)}
-            className="absolute right-0 z-10 p-2 rounded-full bg-[#f8e8f7] hover:bg-[#f1d1ee]"
+            className="absolute right-2 md:right-0 z-[60] p-2 rounded-full bg-[#f8e8f7] hover:bg-[#f1d1ee]"
           >
             <ChevronRight size={20} />
           </button>

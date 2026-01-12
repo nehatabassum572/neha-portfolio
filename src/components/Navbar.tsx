@@ -107,7 +107,7 @@ const Navbar: React.FC = () => {
 
         {/* Mobile Dropdown */}
         {isOpen && (
-          <div className="md:hidden mt-4 space-y-4 flex flex-col items-center bg-slate-900/90 backdrop-blur-sm py-4 rounded-lg shadow-lg bg-grainy">
+          <div className="md:hidden mt-4 space-y-4 flex flex-col items-center backdrop-blur-md shadow-lg bg-slate-950/30 py-4 rounded-lg shadow-lg bg-grainy">
             {navItems.map((item) => (
               <Link
                 key={item.name}
