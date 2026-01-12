@@ -1,8 +1,10 @@
-import React, { useState } from "react";
-import { motion } from "framer-motion";
+import React, { useState, useRef } from "react";
+import { motion, useInView } from "framer-motion";
 import { Github, Linkedin, Send, Mail, MapPin } from "lucide-react";
 
 const Contact: React.FC = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { margin: "-100px", amount: 0.3 }); 
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -40,20 +42,27 @@ const Contact: React.FC = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: false, amount: 0.3 }}
           >
-            <h2 className="text-3xl font-myfont text-[#30A6C7] mb-4">
+            <h2 className="text-4xl font-myfont text-[#f8e8f7] mb-4">
               Contact Me
             </h2>
+            {/* Underline Animation */}
+            <motion.div
+              className="absolute -bottom-2 left-0 h-1 bg-gradient-to-r from-[#30A6C7] to-black-500 rounded-full"
+              initial={{ width: 0 }}
+              animate={isInView ? { width: "20%" } : { width: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+            />
             <p className="text-gray-300 mb-8">
               Open to any adventure that involves learning and making cool stuff!
             </p>
 
-            <div className="space-y-4 text-gray-300">
+            <div className="space-y-4 text-white">
               <div className="flex items-center space-x-3">
-                <Mail className="text-[#30A6C7]" size={20} />
+                <Mail className="text-[#b771bb]" size={20} />
                 <span>tabassumneha572@gmail.com</span>
               </div>
               <div className="flex items-center space-x-3">
-                <MapPin className="text-[#30A6C7]" size={20} />
+                <MapPin className="text-[#b771bb]" size={20} />
                 <span>India</span>
               </div>
             </div>
@@ -71,7 +80,7 @@ const Contact: React.FC = () => {
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.15 }}
                   whileTap={{ scale: 0.95 }}
-                  className="bg-gradient-to-r p-3 rounded-full text-white shadow-lg bg-[#30A6C7] hover:bg-[#03bff3]"
+                  className="bg-gradient-to-r p-3 rounded-full text-white shadow-lg bg-blue-600 hover:bg-blue-700"
                 >
                   {item.icon}
                 </motion.a>
@@ -130,9 +139,9 @@ const Contact: React.FC = () => {
               />
               <button
                 type="submit"
-                className="w-full flex items-center justify-center bg-[#03bff3] hover:opacity-80 text-white font-semibold py-3 rounded-lg transition-all duration-200"
+                className="w-full flex items-center justify-center bg-blue-600 hover:bg-blue-800 text-white font-semibold py-3 rounded-lg transition-all duration-200"
               >
-                <Send className="mr-2" size={18} /> Send
+                <Send className="mr-2 " size={18} /> Send
               </button>
             </form>
           </motion.div>

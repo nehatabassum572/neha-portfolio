@@ -31,18 +31,38 @@ const Projects: React.FC = () => {
         "AgriPredict is an AI-powered crop health platform designed for farmers in rural areas. Using just a smartphone camera, the CNN-based model detects crop diseases early and suggests treatment steps in the farmer’s local language. By combining AI and multilingual support, it help farmers reduce crop loss, increase yield, and access expert guidance anytime, anywhere.",
       image: "https://images.pexels.com/photos/8849295/pexels-photo-8849295.jpeg",
       technologies: ["React", "JWT", "REST APIs", "TailwindCSS", "MobileNetV2", "Docker"],
-      liveUrl: "#",
-      githubUrl: "#",
+      //liveUrl: "#",
+      //githubUrl: "#",
      },
      {
       id: 3,
       title: "Hand Gesture Recognition System",
       description: 
       "This project demonstrates a real-time hand gesture recognition system using Python, and OpenCV, designed to detect and classify hand gestures (wave, point, peace, fist) for intuitive human-computer interaction. Leveraging computer vision techniques, it processes webcam input to enable seamless gesture-based control.",
-      image: "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg",
+      image: "/assests/hand_gesture.png",
       technologies: ["Python", "OpenCV"],
       //liveUrl: "https://github.com/nehatabassum572/hand-gesture-recognition",
       githubUrl: "https://github.com/nehatabassum572/hand-gesture-recognition",
+     },
+     {
+      id: 4,
+      title: "InfraAlert",
+      description: 
+      "InfraAlert is a full-stack civic-tech platform that enables citizens to report local infrastructure issues such as potholes, garbage overflow, and water leaks. It uses attention levels and role-based reporting to help authorities prioritize and resolve issues efficiently.",
+      image: "/assests/InfraAlert.png",
+      technologies: ["React", "TypeScript", "Tailwind CSS", "Shadcn/ui", "Node.js", "Express.js", "Drizzle ORM", "PostgreSQL"],
+      //liveUrl: "https://github.com/nehatabassum572/hand-gesture-recognition",
+      githubUrl: "https://github.com/nehatabassum572/Infra-Alert",
+     },
+     {
+      id: 5,
+      title: "Portfolio",
+      description: 
+      "A personal portfolio showcasing my projects, skills, and experience in full-stack development and machine learning, built with a focus on clean design, performance, and user experience.",
+      image: "/assests/portfolio.png",
+      technologies: ["React", "TypeScript", "Tailwind CSS", "Framer Motion"],
+      liveUrl: "https://neha-portfolio-gamma.vercel.app/",
+      githubUrl: "https://github.com/nehatabassum572/neha-portfolio",
      },
   ];
 
@@ -60,18 +80,17 @@ const Projects: React.FC = () => {
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="container mx-auto max-w-6xl relative"
       >
-        <h2 className="text-3xl font-myfont text-[#30A6C7] text-center mb-16">
+        <h2 className="text-4xl font-myfont text-[#f8e8f7] text-center mb-16">
           My Projects
         </h2>
 
-        {/* Your carousel code remains unchanged */}
         <div className="relative flex items-center justify-center">
           {/* Left Button */}
           <button
             onClick={() =>
               setCurrent((prev) => (prev - 1 + projects.length) % projects.length)
             }
-            className="absolute left-0 z-10 p-2 rounded-full bg-[#30A6C7] hover:bg-[#03bff3]"
+            className="absolute left-0 z-10 p-2 rounded-full bg-[#f8e8f7] hover:bg-[#f1d1ee]"
           >
             <ChevronLeft size={20} />
           </button>
@@ -95,7 +114,7 @@ const Projects: React.FC = () => {
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{
                       opacity: position === "center" ? 1 : 0.3,
-                      scale: position === "center" ? 0.95 : 0.75,
+                      scale: position === "center" ? 0.95 : 0.85,
                       x:
                         position === "center"
                           ? "0%"
@@ -110,24 +129,24 @@ const Projects: React.FC = () => {
                     whileHover={position === "center" ? { scale: 1.02, y: -10 } : {}}
                     transition={{ duration: 0.6 }}
                     className={`absolute w-[380px] h-[500px] rounded-xl shadow-lg overflow-hidden flex flex-col ${
-                      position === "center" ? "bg-[#1b2439]" : "bg-slate-800/40"
+                      position === "center" ? "bg-black/25 backdrop-blur-xl": "bg-slate-800"
                     }`}
                   >
                     {/* Image */}
-                    <div className="h-44 w-full overflow-hidden">
+                    <div className=" h-44 w-full overflow-hidden">
                       <img
                         src={project.image}
                         alt={project.title}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover brightness-75"
                       />
                     </div>
 
                     {/* Content */}
                     <div className="p-4 flex flex-col flex-1">
-                      <h3 className="text-lg font-bold text-white mb-2">
+                      <h3 className="font-myfont text-lg font-bold text-white mb-2">
                         {project.title}
                       </h3>
-                      <p className="text-gray-300 text-xs flex-1">
+                      <p className="font-smooch tracking-[0.08em] text-gray-300 text-m flex-1">
                         {project.description}
                       </p>
 
@@ -137,7 +156,7 @@ const Projects: React.FC = () => {
                           <motion.span
                             whileHover={{ scale: 1.1, y: -2 }}
                             key={tech}
-                            className="px-2 py-0.5 bg-blue-600/30 text-blue-300 rounded-full text-[10px] cursor-default"
+                            className="px-2 py-0.5 bg-[#f8e8f7]/60 text-blue-300 rounded-full text-[10px] text-black cursor-default"
                           >
                             {tech}
                           </motion.span>
@@ -181,7 +200,7 @@ const Projects: React.FC = () => {
           {/* Right Button */}
           <button
             onClick={() => setCurrent((prev) => (prev + 1) % projects.length)}
-            className="absolute right-0 z-10 p-2 rounded-full bg-[#30A6C7] hover:bg-[#03bff3]"
+            className="absolute right-0 z-10 p-2 rounded-full bg-[#f8e8f7] hover:bg-[#f1d1ee]"
           >
             <ChevronRight size={20} />
           </button>

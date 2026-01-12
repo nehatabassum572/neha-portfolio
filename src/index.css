@@ -13,3 +13,24 @@
   src: url('./fonts/quentin.otf') format('opentype');
   font-weight: normal;
 }
+
+.noise-layer {
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      rgba(255,255,255,0.04),
+      rgba(255,255,255,0.04) 1px,
+      transparent 1px,
+      transparent 2px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(0,0,0,0.04),
+      rgba(0,0,0,0.04) 1px,
+      transparent 1px,
+      transparent 2px
+    );
+  opacity: 0.4;
+  background: rgb(77, 10, 10);
+  will-change: transform;
+}

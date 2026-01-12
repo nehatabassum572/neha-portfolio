@@ -22,9 +22,9 @@ const About: React.FC = () => {
               transition={{ duration: 0.2 }}
               className="relative"
             >
-              <div className="w-80 h-80 rounded-3xl overflow-hidden shadow-2xl flex items-center justify-center">
+              <div className="w-80 h-80 rounded-3xl overflow-hidden shadow-2xl flex items-center justify-center border border-white/20">
                 <img
-                  src="your-uploaded-image.jpg"
+                  src="Public\assests\neha_portfolio_img.jpeg"
                   alt="Profile"
                   className="w-full h-full object-cover"
                 />
@@ -36,7 +36,7 @@ const About: React.FC = () => {
           {/* Right Text Section */}
           <div className="bg-transparent p-8 relative">
             <div className="relative mb-6">
-              <h2 className="font-myfont text-3xl text-[#30A6C7]">About Me</h2>
+              <h2 className="font-myfont text-4xl text-[#f8e8f7]">About Me</h2>
 
               {/* Underline Animation */}
               <motion.div
@@ -52,7 +52,7 @@ const About: React.FC = () => {
                 animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
                 transition={{ duration: 0.6 }}
                 whileHover={{ scale: 1.02, x: 10, color: "#FFFFFF" }}
-                className="text-[#D8D9DA] text-sm leading-relaxed mb-6 cursor-pointer"
+                className="text-[#D8D9DA] text-m leading-relaxed mb-6 cursor-pointer"
               >
                 I'm a final-year college student with a passion for coding and creating things 
                 through code. I love diving into complex problems, building web and software projects, 
@@ -63,7 +63,7 @@ const About: React.FC = () => {
                 animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 whileHover={{ scale: 1.02, x: 10, color: "#FFFFFF" }}
-                className="text-[#D8D9DA] text-sm leading-relaxed mb-6 cursor-pointer"
+                className="text-[#D8D9DA] text-m leading-relaxed mb-6 cursor-pointer"
               >
                 When I’m not glued to my computer, I enjoy baking yummy treats and painting colorful pictures. 
                 Baking helps me unwind, while painting lets me express myself creatively. 

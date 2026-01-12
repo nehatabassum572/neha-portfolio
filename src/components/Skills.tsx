@@ -102,7 +102,7 @@ const Skills: React.FC = () => {
           exit={{ opacity: 0, y: -50 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: false }}
-          className="text-3xl font-myfont text-[#30A6C7] text-center mb-16"
+          className="text-4xl font-myfont text-[#f8e8f7] text-center mb-16"
         >
           My Skills
         </motion.h2>

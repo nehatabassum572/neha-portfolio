@@ -15,7 +15,7 @@ const Experience: React.FC = () => {
       id: 1,
       title: "Contributor",
       company: "GSSoC 2025",
-      year: "July 2025 - Present",
+      year: "July 2025 - November 2025",
       description:
         "Contributed to open-source projects under GSSoC 2025 by fixing issues, adding new features, and collaborating with maintainers. Gained hands-on experience in Git, GitHub, and large-scale project workflows while improving code quality and documentation.",
     },
@@ -45,14 +45,14 @@ const Experience: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: false, amount: 0.3 }} // animate in & out
-          className="text-3xl font-myfont text-[#30A6C7] text-center mb-16"
+          className="text-4xl font-myfont text-[#f8e8f7] text-center mb-16"
         >
           My Experience
         </motion.h2>
 
         <div className="relative">
           {/* Timeline line */}
-          <div className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 top-0 bottom-0 w-0.5 bg-blue-500"></div>
+          <div className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 top-0 bottom-0 w-0.5 bg-blue-50"></div>
 
           {experiences.map((item, index) => (
             <motion.div
@@ -74,13 +74,13 @@ const Experience: React.FC = () => {
 
               {/* Card */}
               <div
-                className={`bg-slate-800/70 backdrop-blur-sm rounded-lg p-4 shadow-lg ml-8 md:ml-0 transition-all max-w-lg${
+                className={`bg-black/25 backdrop-blur-xl rounded-lg p-4 shadow-lg ml-8 md:ml-0 transition-all max-w-lg${
                   index % 2 === 0 ? "md:mr-6" : "md:ml-6"
                 }`}
               >
-                <div className="text-blue-400 font-medium mb-1 text-sm">{item.year}</div>
-                <h3 className="text-lg font-bold text-white">{item.title}</h3>
-                <div className="text-blue-300 text-sm mb-2">{item.company}</div>
+                <div className="text-[#c49bc6] font-medium mb-1 text-xs">{item.year}</div>
+                <h3 className="font-myfont text-lg font-bold text-white">{item.title}</h3>
+                <div className="font-smooch tracking-[0.08em] text-[#c49bc6] text-m mb-2">{item.company}</div>
                 <p className="text-gray-300 text-sm leading-relaxed">{item.description}</p>
               </div>
             </motion.div>

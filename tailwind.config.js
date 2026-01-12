@@ -6,6 +6,8 @@ export default {
       fontFamily: {
         myfont: ['nasalization', 'sans-serif'], 
         myfont2: ['quentin', 'sans-serif'],
+        inter: ['Inter', 'sans-serif'],
+        smooch: ['"Smooch Sans"', 'sans-serif'],
       },
     },
   },

@@ -25,7 +25,7 @@ const Hero: React.FC = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="font-myfont2 text-5xl md:text-7xl font-bold text-white mb-6"
+          className="font-myfont2 text-9xl md:text-8xl font-bold text-white mb-6"
         >
           Neha Tabassum
         </motion.h1>
@@ -34,7 +34,7 @@ const Hero: React.FC = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="text-xl md:text-2xl text-blue-300 mb-8 h-8"
+          className="font-smooch md:text-3xl text-slate-300 mb-8 h-8 tracking-[0.08em]"
         >
           {displayedText}
           <span className="animate-pulse">|</span>

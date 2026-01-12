@@ -25,15 +25,25 @@ const Navbar: React.FC = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-4 left-1/2 -translate-x-1/2 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-slate-950/80 backdrop-blur-sm shadow-lg'
+          ? ' backdrop-blur-md shadow-lg bg-slate-950/25 border border-white/10'
           : 'bg-transparent'
-      }`}
+      } rounded-3xl`}
     >
-      <div className="container mx-auto px-6 py-3">
+      <div className="w-[98vw] max-w-[1400px] px-4 py-3">
         <div className="flex justify-between items-center">
-          <div className="font-myfont2 text-2xl font-bold text-white">Neha Tabassum</div>
+          {/* <div className="font-myfont2 text-2xl font-bold text-white">Neha Tabassum</div> */}
+          <div className="flex items-center gap-3">
+            <img
+              src="Public\assests\logo.png"
+              alt="Neha Tabassum Logo"
+              className="w-9 h-9 object-contain"
+            />
+            <span className="font-myfont2 text-2xl font-bold text-white">
+              Neha Tabassum
+            </span>
+          </div>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-8 items-center">
