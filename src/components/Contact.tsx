@@ -1,6 +1,7 @@
 import React, { useState, useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { Github, Linkedin, Send, Mail, MapPin } from "lucide-react";
+import { Github, Linkedin, Send, Mail, MapPin} from "lucide-react";
+import { SiMedium } from "react-icons/si";;
 
 const Contact: React.FC = () => {
   const ref = useRef(null);
@@ -72,6 +73,7 @@ const Contact: React.FC = () => {
               {[
                 { href: "https://github.com/nehatabassum572", icon: <Github size={18} /> },
                 { href: "https://www.linkedin.com/in/nehatabassum572/", icon: <Linkedin size={18} /> },
+                { href: "https://medium.com/@tabassumneha", icon: <SiMedium size={18} /> },
               ].map((item, idx) => (
                 <motion.a
                   key={idx}
